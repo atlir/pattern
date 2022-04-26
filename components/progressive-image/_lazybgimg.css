@@ -1,0 +1,7 @@
+.lazy-bgimg {
+  background-size: cover;
+
+  &--loading {
+    background-size: cover;
+  }
+}

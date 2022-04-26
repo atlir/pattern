@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardLink should match snapshot 1`] = `
+<a
+  class="btn-owner card card--link card--bdr bg-white card--bdr-grey"
+  href="#"
+  role="button"
+  tabindex="0"
+>
+  <div
+    aria-label="Test title"
+    class="card__thumb"
+    style="background-image: url(https://via.placeholder.com/400x200);"
+  />
+   
+  <div
+    class="card__header cl-inverted"
+  >
+    <span
+      class="title-inverted"
+    >
+      Test title
+    </span>
+     
+    <!---->
+  </div>
+</a>
+`;

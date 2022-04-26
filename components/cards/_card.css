@@ -1,0 +1,236 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  min-height: 100%;
+  font-weight: normal;
+
+  &.btn-owner {
+    text-decoration: none;
+
+    &.bg-inverted,
+    &.bg-inverted--o95 {
+      color: rgb(var(--col-background-primary-white));
+
+      &:visited {
+        color: rgb(var(--col-background-primary-white));
+      }
+
+      &:hover {
+        background-color: color-mod(rgb(var(--col-brand)) lightness(-2%));
+      }
+    }
+  }
+
+  &__inner {
+    padding: var(--vr);
+
+    &--tight {
+      padding: var(--vr) 0;
+    }
+  }
+
+  &__thumb {
+    width: 100%;
+    height: 12.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (--bp-desktop) {
+      height: 11.1112rem;
+    }
+
+    &--zoom {
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: transform .3s;
+        background: inherit;
+      }
+    }
+
+    &--full-height {
+      height: auto;
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    margin-bottom: 0;
+    padding: var(--vr);
+  }
+
+  &__tags {
+    flex: 1;
+    margin-bottom: 1.875rem;
+  }
+
+  /* One column */
+  .grid--1col .cell &,
+  .listing--one .list-item & {
+    flex-direction: column;
+
+    .card__inner {
+      margin-right: auto;
+    }
+
+    @media (--bp-x-tablet) {
+      flex-direction: row;
+
+      &--division {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &--bdr-hover {
+    border-bottom: .4rem solid #eee;
+  }
+
+  &--bdr,
+  &--bdr:hover {
+    border-bottom: .4rem solid;
+
+    /* Border color sequence */
+    .cell:nth-child(7n+1) & {
+      border-color: rgb(var(--col-1));
+    }
+
+    .cell:nth-child(7n+2) & {
+      border-color: rgb(var(--col-2));
+    }
+
+    .cell:nth-child(7n+3) & {
+      border-color: rgb(var(--col-3));
+    }
+
+    .cell:nth-child(7n+4) & {
+      border-color: rgb(var(--col-4));
+    }
+
+    .cell:nth-child(7n+5) & {
+      border-color: rgb(var(--col-5));
+    }
+
+    .cell:nth-child(7n+6) & {
+      border-color: rgb(var(--col-6));
+    }
+
+    .cell:nth-child(7n) & {
+      border-color: rgb(var(--col-7));
+    }
+
+    .cell--col-1 & {
+      border-color: rgb(var(--col-1)) !important;
+    }
+
+    .cell--col-2 & {
+      border-color: rgb(var(--col-2)) !important;
+    }
+
+    .cell--col-3 & {
+      border-color: rgb(var(--col-3)) !important;
+    }
+
+    .cell--col-4 & {
+      border-color: rgb(var(--col-4)) !important;
+    }
+
+    .cell--col-5 & {
+      border-color: rgb(var(--col-5)) !important;
+    }
+
+    .cell--col-6 & {
+      border-color: rgb(var(--col-6)) !important;
+    }
+
+    .cell--col-7 & {
+      border-color: rgb(var(--col-7)) !important;
+    }
+
+    .list-item:nth-child(7n+1) & {
+      border-color: rgb(var(--col-1));
+    }
+
+    .list-item:nth-child(7n+2) & {
+      border-color: rgb(var(--col-2));
+    }
+
+    .list-item:nth-child(7n+3) & {
+      border-color: rgb(var(--col-3));
+    }
+
+    .list-item:nth-child(7n+4) & {
+      border-color: rgb(var(--col-4));
+    }
+
+    .list-item:nth-child(7n+5) & {
+      border-color: rgb(var(--col-5));
+    }
+
+    .list-item:nth-child(7n+6) & {
+      border-color: rgb(var(--col-6));
+    }
+
+    .list-item:nth-child(7n) & {
+      border-color: rgb(var(--col-7));
+    }
+
+    .colour-cycle--alt .cell:nth-child(4n+1) &,
+    .colour-cycle--alt .list-item:nth-child(4n+1) & {
+      border-color: rgb(var(--col-orange-mid-2));
+    }
+
+    .colour-cycle--alt .cell:nth-child(4n+2) &,
+    .colour-cycle--alt .list-item:nth-child(4n+2) & {
+      border-color: rgb(var(--col-teal-mid-2));
+    }
+
+    .colour-cycle--alt .cell:nth-child(4n+3) &,
+    .colour-cycle--alt .list-item:nth-child(4n+3) & {
+      border-color: rgb(var(--col-yellow-mid-2));
+    }
+
+    .colour-cycle--alt .cell:nth-child(4n) &,
+    .colour-cycle--alt .list-item:nth-child(4n) & {
+      border-color: rgb(var(--col-green-mid-2));
+    }
+  }
+
+  &--bdr-top,
+  &--bdr-top:hover {
+    border-top: .4rem solid;
+    border-bottom: 0;
+  }
+
+  &--bdr-blue {
+
+    .cell &,
+    .list-item & {
+      border-bottom: .4rem solid rgb(var(--col-navy-mid-2));
+    }
+  }
+
+  &--bdr-grey {
+
+    .cell &,
+    .list-item & {
+      border-bottom: .4rem solid rgb(153, 162, 170);
+    }
+  }
+
+  &--bdr-thin,
+  &--bdr-thin:hover {
+    border-width: .2rem;
+  }
+}

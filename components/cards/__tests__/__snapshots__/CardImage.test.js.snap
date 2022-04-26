@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardImage should match snapshot 1`] = `
+<a
+  aria-label="mock title"
+  class="btn-owner card card--image card--bdr bg-inverted"
+  href="www.unimelb.edu.au"
+>
+  <!---->
+   
+  <div
+    class="card__inner"
+  >
+    <!---->
+     
+    <p />
+  </div>
+</a>
+`;

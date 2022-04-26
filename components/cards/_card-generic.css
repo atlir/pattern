@@ -1,0 +1,133 @@
+.card--generic {
+  background-color: rgb(var(--col-background-primary-white));
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .18);
+  overflow: hidden;
+
+  .card__thumb {
+    padding-top: 56.25%;
+
+    &--square {
+      padding-top: 100%;
+    }
+  }
+
+  .card__header {
+    margin-bottom: .5rem;
+  }
+
+  .card__title {
+    font-size: 1.125rem;
+    display: block;
+    line-height: 1.1;
+    letter-spacing: -.0125rem;
+    font-weight: var(--fw-semibold);
+    text-decoration: none;
+    color: rgb(var(--col-background-primary-navy));
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .card__inner {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 1rem;
+    margin-right: 0 !important;
+
+    @media (--bp-desktop) {
+      padding: 1.25rem;
+    }
+  }
+
+  .card__sub-titles {
+    border-top: 1px solid rgb(var(--col-black-mid-1));
+    padding-top: .5rem;
+    font-weight: var(--fw-semibold);
+    font-size: .9375rem;
+    line-height: 1.5;
+    color: rgb(var(--col-grey-dark));
+
+    svg {
+      width: .8125rem;
+      height: .8125rem;
+    }
+  }
+
+  .sub-title {
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    svg {
+      margin: 0 .3125rem 0 0;
+    }
+  }
+
+  .card__meta {
+    margin-bottom: .25rem;
+  }
+
+  .card__excerpt {
+    border-top: 1px solid rgb(var(--col-black-mid-1));
+    padding-top: .75rem;
+    margin: .5rem 0 1rem 0;
+    flex: 1 1 auto;
+    font-size: .9375rem;
+    line-height: 1.5;
+    color: rgb(var(--col-grey-dark));
+  }
+
+  .card__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+
+    @media (--bp-desktop) {
+      flex-direction: row;
+    }
+
+    &--column {
+      flex-direction: column;
+    }
+  }
+
+  .card__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-self: flex-end;
+    margin-top: auto; /* temp so older version of component doesn't break */
+
+    a {
+      font-weight: var(--fw-semibold);
+      color: rgb(var(--col-background-primary-navy)) !important;
+      width: max-content;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &--full-width {
+    .card__thumb {
+      @media (--bp-desktop) {
+        width: 30%;
+        padding-top: 0;
+      }
+    }
+
+    .card__inner {
+      @media (--bp-desktop) {
+        width: 70%;
+      }
+    }
+  }
+
+  @media (--bp-tablet) {
+    flex-wrap: wrap;
+  }
+}

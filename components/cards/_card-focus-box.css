@@ -1,0 +1,173 @@
+/**
+ * Focus box as used in About us - Growing esteem pages
+ */
+.card--focus-box {
+  position: relative;
+  padding: calc(var(--vr) * 2);
+  text-align: left;
+
+  &-vert {
+    padding: var(--vr);
+    text-align: center;
+  }
+
+  &__cnr {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    opacity: .5;
+    color: rgb(var(--col-emerald-mid-2));
+
+    &--top-left {
+      top: 0;
+      left: 0;
+    }
+
+    &--btm-right {
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  /* Focus mark color modifiers */
+  &--brand {
+    .card--focus-box__cnr {
+      color: rgb(var(--col-brand));
+    }
+  }
+
+  &--white {
+    .card--focus-box__cnr {
+      color: rgb(var(--col-background-primary-white));
+    }
+  }
+
+  &--teal {
+    .card--focus-box__cnr {
+      color: rgb(var(--col-teal-mid-2));
+    }
+  }
+
+  &--yellow {
+    .card--focus-box__cnr {
+      color: rgb(var(--col-yellow-mid-2));
+    }
+  }
+
+  &--emerald {
+    .card--focus-box__cnr {
+      color: rgb(var(--col-emerald-mid-2));
+    }
+  }
+
+  &--blue {
+    .card--focus-box__cnr {
+      color: rgb(var(--col-blue-mid-2));
+    }
+  }
+
+  &--orange {
+    .card--focus-box__cnr {
+      color: rgb(var(--col-orange-mid-2));
+    }
+  }
+
+  &--green {
+    .card--focus-box__cnr {
+      color: rgb(var(--col-green-mid-2));
+    }
+  }
+
+  &--purple {
+    .card--focus-box__cnr {
+      color: rgb(var(--col-purple-mid-2));
+    }
+  }
+
+  &--pink {
+    .card--focus-box__cnr {
+      color: rgb(var(--col-pink-mid-2));
+    }
+  }
+
+  &__icon {
+    width: 100%;
+    max-width: 12.5rem;
+    max-height: 12.5rem;
+    margin-right: auto;
+    margin-bottom: var(--vr);
+    margin-left: auto;
+    padding: 0 var(--vr);
+    stroke-width: 0;
+
+    @media (--bp-desktop) {
+      max-width: 11.111rem;
+      max-height: 11.111rem;
+    }
+  }
+
+  .cell:nth-child(7n+1) &__icon *,
+  .list-item:nth-child(7n+1) &__icon * {
+    fill: rgb(var(--col-2));
+  }
+
+  .cell:nth-child(7n+2) &__icon *,
+  .list-item:nth-child(7n+2) &__icon * {
+    fill: rgb(var(--col-3));
+  }
+
+  .cell:nth-child(7n+3) &__icon *,
+  .list-item:nth-child(7n+3) &__icon * {
+    fill: rgb(var(--col-4));
+  }
+
+  .cell:nth-child(7n+4) &__icon *,
+  .list-item:nth-child(7n+4) &__icon * {
+    fill: rgb(var(--col-5));
+  }
+
+  .cell:nth-child(7n+5) &__icon *,
+  .list-item:nth-child(7n+5) &__icon * {
+    fill: rgb(var(--col-6));
+  }
+
+  .cell:nth-child(7n+6) &__icon *,
+  .list-item:nth-child(7n+6) &__icon * {
+    fill: rgb(var(--col-7));
+  }
+
+  .cell:nth-child(7n) &__icon *,
+  .list-item:nth-child(7n) &__icon * {
+    fill: rgb(var(--col-1));
+  }
+
+  .colour-cycle--alt .cell:nth-child(4n+1) &__icon *,
+  .colour-cycle--alt .list-item:nth-child(4n+1) &__icon * {
+    fill: rgb(var(--col-orange-mid-2));
+  }
+
+  .colour-cycle--alt .cell:nth-child(4n+2) &__icon *,
+  .colour-cycle--alt .list-item:nth-child(4n+2) &__icon * {
+    fill: rgb(var(--col-teal-mid-2));
+  }
+
+  .colour-cycle--alt .cell:nth-child(4n+3) &__icon *,
+  .colour-cycle--alt .list-item:nth-child(4n+3) &__icon * {
+    fill: rgb(var(--col-yellow-mid-2));
+  }
+
+  .colour-cycle--alt .cell:nth-child(4n) &__icon *,
+  .colour-cycle--alt .list-item:nth-child(4n) &__icon * {
+    fill: rgb(var(--col-green-mid-2));
+  }
+
+  &:not(.page-header &, .split-section &) {
+    width: calc(100% + 3rem);
+    margin: -3rem -1.5rem;
+
+    @media (--bp-tablet) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

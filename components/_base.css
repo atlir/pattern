@@ -1,0 +1,236 @@
+/* stylelint-disable selector-list-comma-newline-after */
+
+/**
+ * Base styles
+ */
+html {
+  box-sizing: border-box;
+  height: 100%;
+  color: rgb(var(--col-black-dark));
+  font-family: var(--ff-normal);
+  /* stylelint-disable */
+  font-size: 16px;
+  /* stylelint-enable */
+  line-height: var(--lh);
+  text-rendering: optimizeLegibility;
+
+  @media (--bp-xx-wide) {
+    /* stylelint-disable */
+    font-size: 18px;
+    /* stylelint-enable */
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  background-color: rgb(var(--col-background-secondary-navy));
+
+  /* same as page header/footer for scroll overflow */
+
+  /* make fonts look a bit thiner */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* IE Srollbar Styling */
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -ms-scrollbar-face-color: rgb(var(--col-navy-mid-1));
+  -ms-scrollbar-arrow-color: rgb(var(--col-navy-dark));
+  -ms-scrollbar-track-color: rgb(var(--col-navy-light));
+  -ms-scrollbar-shadow-color: rgb(var(--col-navy-light));
+}
+
+main {
+  display: block;
+  background-color: rgb(var(--col-background-primary-white));
+
+  /* override scroll overflow background */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+hr,
+pre,
+table,
+blockquote,
+figure,
+fieldset,
+address {
+  margin: 0 0 var(--vr);
+}
+
+p {
+  color: rgb(var(--col-grey-mid-3));
+
+  .bg-inverted &,
+  .bg-inverted-dark &,
+  .bg-inverted-darker &,
+  .bg-inverted--o95 & {
+    color: rgb(var(--col-white));
+  }
+}
+
+pre {
+  overflow: scroll;
+
+  /* prevent unbroken line from overflowing container width */
+
+  &.codeblock {
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, .033);
+    border-radius: var(--br);
+    background-color: rgba(0, 0, 0, .033);
+  }
+}
+
+form {
+  margin: 0;
+}
+
+th,
+td,
+button,
+legend,
+fieldset,
+blockquote {
+  padding: 0;
+}
+
+hr {
+  margin: calc(var(--vr) * 2) 0;
+  border: 1px solid rgb(var(--col-black-mid-1));
+}
+
+ol,
+ul {
+  padding-left: var(--vr);
+
+  ol,
+  ul {
+    margin-top: calc(var(--vr) / 2);
+    margin-bottom: 0;
+  }
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+
+  ol {
+    list-style-type: lower-roman;
+  }
+}
+
+ul ul {
+  list-style-type: circle;
+
+  ul {
+    list-style-type: square;
+  }
+}
+
+li {
+  margin-bottom: calc(var(--vr) / 2);
+}
+
+a {
+  color: rgb(var(--col-link));
+  font-weight: var(--fw-semibold);
+
+  &:visited {
+    color: rgb(var(--col-link-visited));
+  }
+
+  &:active {
+    color: rgb(var(--col-link-active));
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  .bg-inverted &,
+  .bg-inverted-dark &,
+  .bg-inverted-darker &,
+  .bg-inverted--o95 & {
+    &:not([class]) {
+      color: rgb(var(--col-link-on-dark));
+
+      &:visited {
+        color: rgb(var(--col-link-visited-on-dark));
+      }
+    }
+  }
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  line-height: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+button:not([disabled]) {
+  cursor: pointer;
+}
+
+svg {
+  display: block;
+  fill: currentColor;
+}
+
+/* revert to dotted bottom border for abbreviations */
+/* https://github.com/necolas/normalize.css/pull/468#issuecomment-174107494 */
+abbr[title] {
+  border-bottom: 1px dotted;
+  text-decoration: none;
+}
+
+/* hide outline on elements focused programmatically */
+[tabindex='-1'] {
+  outline-width: 0;
+}
+
+/**
+ * Hide elements
+ * Prefer the `hidden` attribute where possible. For `svg` elements,
+ * use the `hidden` class instead, as the attribute is not allowed.
+ */
+[hidden],
+.hidden {
+  display: none !important;
+}
+
+/**
+ * Visibility hidden elements
+ * Prefer the `hidden` attribute where possible. For `svg` elements,
+ * use the `hidden` class instead, as the attribute is not allowed.
+ */
+.visibility {
+  &--hidden {
+    visibility: hidden !important;
+  }
+}

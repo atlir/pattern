@@ -1,0 +1,60 @@
+.card--fact {
+  .card__inner {
+    display: block;
+  }
+
+  .card__header {
+    margin-bottom: .75rem;
+    font-family: var(--ff-lead);
+    font-size: 2.6rem;
+    font-weight: bold;
+
+    &--sml {
+      font-size: 1.7rem;
+    }
+  }
+
+  .card__thumb {
+    width: auto;
+    max-height: 9.375rem;
+
+    @media (--bp-desktop) {
+      max-height: 8.333rem;
+    }
+
+    & + .card__inner {
+      padding-top: 0;
+    }
+  }
+
+  .card__meta {
+    margin-bottom: .75rem;
+    font-size: 1.1rem;
+    font-weight: var(--fw-semibold);
+  }
+
+  &-image {
+    .card__thumb {
+      margin: var(--vr) auto;
+    }
+
+    @media (--bp-x-tablet) {
+      .list-item--desk-1of1 & {
+        display: flex;
+        flex-direction: row;
+
+        .card__thumb {
+          width: 40%;
+        }
+
+        .card__inner {
+          width: 60%;
+        }
+      }
+    }
+  }
+
+  p {
+    font-size: .9rem;
+  }
+}

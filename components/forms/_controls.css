@@ -1,0 +1,34 @@
+.mce form[id^='form_'],
+.form {
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    margin-right: .5rem;
+  }
+
+  button,
+  input[type='submit'] {
+    display: inline-block;
+    padding: calc(var(--vr) * .8) 3rem;
+    transition: border-color .2s;
+    border: 2px solid rgb(var(--col-brand));
+    border-radius: var(--br);
+    background-color: rgb(var(--col-brand));
+    color: rgb(var(--col-background-primary-white));
+    font-weight: var(--fw-semibold);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+      border-color: color-mod(#fff alpha(60%));
+    }
+
+    &:active {
+      transition: background-color .2s;
+      background-color: rgba(9, 65, 131, .7);
+    }
+  }
+}
