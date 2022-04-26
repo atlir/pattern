@@ -1,7 +1,0 @@
-.card--news {
-  background-color: rgb(var(--col-background-primary-white));
-
-  .card__header {
-    margin-top: var(--vr);
-  }
-}

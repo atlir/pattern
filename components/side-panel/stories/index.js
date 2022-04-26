@@ -1,2 +1,0 @@
-import './Left';
-import './Right';
