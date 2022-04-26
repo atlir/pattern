@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledSelect should match snapshot 1`] = `
+<div
+  class="styled-select"
+>
+  <select
+    aria-label="choose an option"
+    class=""
+  >
+     
+  </select>
+   
+  <div
+    class="styled-select__label"
+  >
+    
+    text
+  
+  </div>
+</div>
+`;

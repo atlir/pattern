@@ -1,0 +1,69 @@
+.logo {
+  display: flex;
+
+  &__link {
+    color: rgb(var(--col-background-primary-white));
+    line-height: 0;
+  }
+
+  &__image {
+    display: block;
+    height: 4.125rem;
+    width: 4.125rem;
+
+    @media (--bp-desktop) {
+      height: 3.666rem;
+      width: 3.666rem;
+    }
+
+    &--md {
+      @media (--bp-tablet) {
+        height: 6rem;
+        width: 6rem;
+      }
+
+      @media (--bp-desktop) {
+        height: 5.333rem;
+        width: 5.333rem;
+      }
+    }
+
+    &--lg {
+      height: 9.25rem;
+      width: 9.25rem;
+
+      @media (--bp-xx-wide) {
+        height: 8.222rem;
+        width: 8.222rem;
+      }
+    }
+  }
+
+  &--no-padding {
+    &-sm {
+      margin: -.375rem;
+
+      @media (--bp-desktop) {
+        margin: -.333rem;
+      }
+    }
+    &-md {
+      margin: -.375rem;
+
+      @media (--bp-desktop) {
+        margin: -.333rem;
+      }
+    }
+    &-lg {
+      margin: -.625rem;
+
+      @media (--bp-tablet) {
+        margin: -1rem;
+      }
+
+      @media (--bp-xx-wide) {
+        margin: -.888rem;
+      }
+    }
+  }
+}

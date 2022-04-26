@@ -1,0 +1,20 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": false,
+  "tslint.autoFixOnSave": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "eslint.options": {
+    "extensions": [
+        ".js",
+        ".vue"
+    ]
+  },
+  "eslint.validate": [
+    "vue",
+    "html",
+    "javascript"
+],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}

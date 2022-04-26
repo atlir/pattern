@@ -1,0 +1,47 @@
+.accordion {
+  .toggleblock__default {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    transition: background-color .15s ease-out, color .15s ease-out;
+    border-bottom: 1px solid rgb(var(--col-background-secondary-grey));
+    text-decoration: none;
+    cursor: pointer;
+
+    h2 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+      line-height: 1.25;
+      letter-spacing: inherit; /* in case accordion is nested inside .content-block */
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 1.25rem;
+      width: 0;
+      height: 0;
+      margin-top: -.25rem;
+      border-top: .333rem solid currentColor;
+      border-right: .333rem solid transparent;
+      border-left: .333rem solid transparent;
+    }
+
+    &--active,
+    &:focus,
+    &:hover {
+      background-color: rgb(var(--col-background-primary-grey));
+    }
+
+    &--active::after {
+      border-top: 0;
+      border-bottom: .333rem solid currentColor;
+    }
+  }
+
+  .toggleblock__hidden-inner {
+    padding: 1.25rem;
+    border-bottom: 1px solid rgb(var(--col-background-secondary-grey));
+    background-color: rgb(var(--col-background-primary-grey));
+  }
+}

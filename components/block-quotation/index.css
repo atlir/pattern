@@ -1,0 +1,139 @@
+blockquote,
+.block-quotation {
+  display: flex;
+  flex: 1;
+  position: relative;
+  flex-direction: column;
+  padding-right: var(--vr);
+  padding-left: var(--vr);
+
+  p,
+  &__content {
+    position: relative;
+    margin-bottom: 0;
+    font-family: var(--ff-lead);
+    font-size: 1.8rem;
+    font-style: italic;
+
+    &::before,
+    &::after {
+      position: absolute;
+      color: rgb(var(--col-grey-mid-1));
+      font-size: 2.8rem;
+      font-style: normal;
+      line-height: 0;
+    }
+
+    &::before {
+      content: '“';
+      top: 1rem;
+      float: left;
+      transform: translateX(-110%);
+    }
+
+    &::after {
+      content: '”';
+      right: 0;
+      bottom: 0;
+      float: right;
+      transform: translateX(110%);
+    }
+
+    &--large-quotes {
+      &::before,
+      &::after {
+        @media (--bp-desktop) {
+          font-size: 5rem !important;
+        }
+      }
+    }
+  }
+
+  &.long {
+    p,
+    &__content {
+      font-size: 1.6rem;
+    }
+  }
+
+  &--bdr-top {
+    padding-top: 1.8rem;
+    border-top: 1px solid;
+    border-color: rgb(var(--col-grey-mid-1));
+  }
+
+  &--bdr-btm {
+    padding-bottom: 1.8rem;
+    border-bottom: 1px solid;
+    border-color: rgb(var(--col-grey-mid-1));
+  }
+
+  cite,
+  &__author {
+    width: 100%;
+    margin-top: calc(var(--vr) / 2);
+    float: left;
+    font-size: 1.1rem;
+    font-style: normal;
+    text-align: left;
+    font-weight: var(--fw-bold);
+
+    &::before {
+      content: '—';
+    }
+  }
+
+  &__sub-cite {
+    font-weight: var(--fw-regular);
+    font-size: 1rem;
+    line-height: 1.55;
+
+    @media (--bp-x-tablet) {
+      margin-top: calc(var(--vr) / 2);
+    }
+  }
+
+  .bg-inverted & {
+    cite {
+      color: rgb(var(--col-black-light));
+    }
+
+    &__content {
+      &::before,
+      &::after {
+        color: rgb(var(--col-black-light));
+      }
+    }
+
+    &--bdr-btm,
+    &--bdr-top {
+      border-color: rgb(var(--col-black-light));
+    }
+  }
+
+  &--small {
+    padding-left: 0;
+    padding-right: 0;
+
+    p,
+    .block-quotation__content {
+      font-size: .95rem;
+      line-height: 1.6;
+
+      @media (--bp-desktop) {
+        font-size: 1.15rem;
+        line-height: 1.65;
+      }
+    }
+
+    .block-quotation__author {
+      font-size: 1.15rem;
+      line-height: 1.15;
+    }
+  }
+
+  @media (--bp-desktop) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

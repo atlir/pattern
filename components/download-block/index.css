@@ -1,0 +1,44 @@
+.download-block {
+  display: flex;
+  align-items: center;
+  padding: var(--vr);
+  border: 1px solid rgb(var(--col-brand));
+  border-radius: 4px;
+
+  &.btn-owner {
+    text-decoration: none;
+
+    &:hover {
+      border-color: rgb(var(--col-navy-mid-2));
+
+      .download-block__inner h3 {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    @media (--bp-tablet) {
+      width: 70%;
+      padding-right: var(--vr);
+      padding-left: var(--vr);
+    }
+  }
+
+  &__thumb {
+    width: 30%;
+
+    @media (--bp-max-mobile) {
+      display: none;
+    }
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+  }
+}

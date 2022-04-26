@@ -1,0 +1,129 @@
+.card--image-focus {
+  width: 100%;
+  padding: 0;
+  text-align: left;
+
+  .card__thumb {
+    position: relative;
+    height: 15rem;
+
+    @media (--bp-desktop) {
+      height: 13.334rem;
+    }
+
+    &-img,
+    img {
+      width: 100%;
+      height: 15rem;
+
+      @media (--bp-desktop) {
+        height: 13.334rem;
+      }
+    }
+
+    &-img {
+      background-position: center;
+      background-size: cover;
+    }
+
+    img {
+      @supports (object-fit: cover) {
+        object-fit: cover;
+      }
+    }
+
+    &--tall {
+      height: 22.5rem;
+
+      @media (--bp-desktop) {
+        height: 20rem;
+      }
+
+      img {
+        height: 22.5rem;
+
+        @media (--bp-desktop) {
+          height: 20rem;
+        }
+      }
+    }
+
+    &--full {
+      height: 100%;
+
+      img {
+        display: flex;
+        height: 100%;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: calc(var(--z-default) + 1);
+      width: 5rem;
+      height: 5rem;
+      opacity: .6;
+      background-size: cover;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      background-image: url('~icons/focus-top-left.svg?fill=#9AD6C3');
+    }
+
+    &::after {
+      right: 0;
+      bottom: 0;
+      background-image: url('~icons/focus-bottom-right.svg?fill=#9AD6C3');
+    }
+  }
+
+  .card__inner {
+    h3 {
+      margin-bottom: .75rem;
+      font-size: 1.25rem;
+      letter-spacing: normal;
+    }
+  }
+
+  &--col-brand {
+    .card__thumb {
+      &::before { background-image: url('~icons/focus-top-left.svg?fill=#074482'); }
+      &::after { background-image: url('~icons/focus-bottom-right.svg?fill=#074482'); }
+    }
+  }
+
+  &--col-white {
+    .card__thumb {
+      &::before { background-image: url('~icons/focus-top-left.svg?fill=#FFF'); }
+      &::after { background-image: url('~icons/focus-bottom-right.svg?fill=#FFF'); }
+    }
+  }
+
+  &.btn-owner:hover {
+    .card__thumb {
+      &::before,
+      &::after {
+        opacity: .7;
+      }
+    }
+
+    .card__inner {
+      h2,
+      h3,
+      h4 { /* stylelint-disable-line */
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__tight {
+    .card__inner {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
